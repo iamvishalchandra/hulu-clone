@@ -1,0 +1,44 @@
+.navbar {
+  position: relative;
+  &__topics {
+    display: flex;
+    padding: 0 2.5rem;
+    white-space: nowrap;
+    gap: 3rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__title {
+      cursor: pointer;
+      transition-duration: 100ms;
+      transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0)
+        scaleX(1) scaleY(1);
+
+      &:last-child {
+        padding-right: 6rem;
+      }
+      &:hover {
+        transform: scaleX(1.25) scaleY(1.25);
+        color: white;
+      }
+      &:active {
+        color: red;
+      }
+    }
+  }
+
+  &__fade {
+    position: absolute;
+    top: 25%;
+    right: 0%;
+
+    height: 40px;
+    width: 8%;
+    background: linear-gradient(to left, #06202a, transparent);
+  }
+}
